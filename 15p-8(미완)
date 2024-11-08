@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+{
+	int a,b,l,s,num,sum,all;
+	printf("a : ");
+	scanf("%d",&a);
+	printf("b : ");
+	scanf("%d",&b);
+	if (a>b)
+	{
+		l=a
+		s=b
+	}
+	else if (a<b)
+	{
+		l=b
+		s=a
+	}
+	
+	return 0;
+}
