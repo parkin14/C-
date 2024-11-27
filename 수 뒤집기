@@ -1,0 +1,22 @@
+#include <stdio.h>
+int ReverseNum(int n)
+{
+	int i,a;
+	while(1)
+	{
+		a+=n%10;
+		n/=10;
+		if(n==0)
+			break;
+		a*=10;
+	}
+	return a;
+}
+int main()
+{
+	int result,n;
+	scanf("%d",&n);
+	result=ReverseNum(n);
+	printf("%d",result);
+	return 0;
+}
