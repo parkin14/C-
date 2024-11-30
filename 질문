@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int isPrime(int a1,int b1)
+{
+	int sum=0,j,i,flag=0;
+	for(j=a1;j<=b1;j++)
+	{
+		if(j==2)
+		{
+			sum++;
+			continue;
+		}
+		else if(j>=3)
+		{
+			for(i=2;i<j;i++)
+			{
+				if(j%i==0)
+				{
+					continue;
+				}
+				else
+				{
+					sum++;
+					continue;
+				}
+			}
+		}
+	}
+	return sum;		
+}
+int main()
+{
+	int a,b,result;
+	scanf("%d %d",&a,&b);
+	result=isPrime(a,b);
+	printf("%d개",result);
+	return 0;
+}
