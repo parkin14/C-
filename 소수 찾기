@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int isPrime(int a)
+{
+	int i,flag=0;
+	if(a==2)
+	{
+		return 0;
+	}
+	else if(a>=3)
+	{
+		for(i=2;i<a;i++)
+		{
+			if(a%i==0)
+			{
+				flag=1;
+				break;
+			}
+			else
+			{
+				continue;
+			}
+		}
+		if(flag==0)
+		{
+			return 0;
+		}
+		else if(flag==1)
+		{
+			return 1;
+		}
+	}		
+}
+int main()
+{
+	int result,n;
+	scanf("%d",&n);
+	result=isPrime(n);
+	if(result==0)
+	{
+		printf("소수");
+	}
+	else if(result==1)
+	{
+		printf("소수 아님");	
+	} 
+	return 0;
+}
