@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main()
+{
+	srand((unsigned) time(NULL));
+	int a[10],min=100,max=0,max_idx,min_idx;
+	for(int i=0;i<10;i++)
+	{
+		a[i]=rand()%100;
+		if(a[i]>max)
+		{
+			max=a[i];
+			max_idx=i;
+		}
+		else if(a[i]<min)
+		{
+			min=a[i];
+			min_idx=i;
+		}	
+	}
+	for(int i=0;i<10;i++)
+	{
+		printf("%d ",a[i]);
+	}
+	printf("\nmax: %d, max_idx: %d",max,max_idx);
+	printf("\nmin: %d, min_idx: %d",min,min_idx);
+	
+	return 0;
+}
