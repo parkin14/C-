@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <conio.h>
+#include <windows.h>
+void GotoXY(int x, int y)
+{
+	COORD pos = {x,y};
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),pos);
+}
+int main()
+{
+	int i=0;
+	do
+	{
+		GotoXY(0,0);
+		if(i<10)
+		{
+			printf("0");
+		}
+		printf("%d",i);
+		
+		Sleep(1000);
+		i++;
+	} while(i<=100);
+	return 0;
+}
